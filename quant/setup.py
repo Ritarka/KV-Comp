@@ -15,6 +15,8 @@ extra_compile_args = {
         "-O3", 
         "-std=c++17",
         "-DENABLE_BF16",  # TODO
+        "-I/usr/local/cuda/include",  # Ensure CUDA headers are included
+       # "-I/home/intern/anaconda3/envs/kivi/lib/python3.10/site-packages/torch/include",
         "-U__CUDA_NO_HALF_OPERATORS__",
         "-U__CUDA_NO_HALF_CONVERSIONS__",
         "-U__CUDA_NO_BFLOAT16_OPERATORS__",
