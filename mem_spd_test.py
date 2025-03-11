@@ -5,8 +5,8 @@ from models.llama_kivi import LlamaForCausalLM_KIVI
 from transformers import LlamaConfig, AutoTokenizer
 import time
 
-K_BITS = 2
-V_BITS = 2
+K_BITS = 16
+V_BITS = 16
 GROUP_SIZE = 32
 RESIDUAL_LENGTH = 128
 BATCH_SIZE = 48
@@ -16,7 +16,7 @@ model_name_or_path = 'meta-llama/Llama-2-7b-hf'
 config = LlamaConfig.from_pretrained(model_name_or_path)
 config.k_bits = K_BITS # current support 2/4 bit for KV Cache
 config.v_bits = V_BITS # current support 2/4 bit for KV Cache
-config.use_flash = True
+config.use_flash = False
 config.group_size = GROUP_SIZE
 config.residual_length = RESIDUAL_LENGTH # the number of recent fp16 tokens
 CACHE_DIR = PATH_TO_YOUR_SAVE_DIR
