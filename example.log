@@ -1,0 +1,858 @@
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 140424328099392 on /home/intern/.cache/huggingface/hub/.locks/datasets--wikitext/2a4fec2bc8df76c9d4da1c8e8865b625eb221c76.lock
+DEBUG:filelock:Lock 140424328099392 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--wikitext/2a4fec2bc8df76c9d4da1c8e8865b625eb221c76.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 10464
+DEBUG:filelock:Attempting to release lock 140424328099392 on /home/intern/.cache/huggingface/hub/.locks/datasets--wikitext/2a4fec2bc8df76c9d4da1c8e8865b625eb221c76.lock
+DEBUG:filelock:Lock 140424328099392 released on /home/intern/.cache/huggingface/hub/.locks/datasets--wikitext/2a4fec2bc8df76c9d4da1c8e8865b625eb221c76.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 140424328099680 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140424328099680 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140424328099680 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140424328099680 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 140424328759472 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140424328759472 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140424328759472 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140424328759472 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: s3.amazonaws.com
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 140424328101696 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140424328101696 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140424328101696 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140424328101696 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 140424328101216 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140424328101216 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140424328101216 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140424328101216 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+INFO:__main__:wikitext2 perplexity: 5.47
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139747916131840 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139747916131840 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139747916131840 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139747916131840 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139747916120176 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139747916120176 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139747916120176 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139747916120176 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139747604073968 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139747604073968 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139747604073968 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139747604073968 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139747916124064 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139747916124064 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139747916124064 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139747916124064 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+INFO:__main__:wikitext2 perplexity: 5.47
+WARNING:lm_eval.models.huggingface:`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+DEBUG:lm_eval.models.huggingface:Using model type 'causal'
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+WARNING:lm_eval.models.huggingface:Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+DEBUG:lm_eval.tasks:File _evalita-mp_ner_wn.yaml in /home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+DEBUG:lm_eval.tasks:File _evalita-mp_ner_fic.yaml in /home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+DEBUG:lm_eval.tasks:File _evalita-mp_ner_adg.yaml in /home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/lm_eval/tasks/evalita_llm could not be loaded
+INFO:lm_eval.evaluator:Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+INFO:lm_eval.evaluator:Using pre-initialized model
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/piqa/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/ybisk/piqa/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190776960 on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/1bf728fa142ac8e4e38acc35dcbd24e60d3ea23f.lock
+DEBUG:filelock:Lock 139746190776960 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/1bf728fa142ac8e4e38acc35dcbd24e60d3ea23f.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/ybisk/piqa/resolve/main/README.md HTTP/1.1" 200 8413
+DEBUG:filelock:Attempting to release lock 139746190776960 on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/1bf728fa142ac8e4e38acc35dcbd24e60d3ea23f.lock
+DEBUG:filelock:Lock 139746190776960 released on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/1bf728fa142ac8e4e38acc35dcbd24e60d3ea23f.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/piqa/resolve/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0/piqa.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/ybisk/piqa/resolve/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0/piqa.py HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190781136 on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/0f0d96172f9bf7aa10069374b3236ef083cfeb8e.lock
+DEBUG:filelock:Lock 139746190781136 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/0f0d96172f9bf7aa10069374b3236ef083cfeb8e.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/ybisk/piqa/resolve/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0/piqa.py HTTP/1.1" 200 5358
+DEBUG:filelock:Attempting to release lock 139746190781136 on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/0f0d96172f9bf7aa10069374b3236ef083cfeb8e.lock
+DEBUG:filelock:Lock 139746190781136 released on /home/intern/.cache/huggingface/hub/.locks/datasets--piqa/0f0d96172f9bf7aa10069374b3236ef083cfeb8e.lock
+DEBUG:urllib3.connectionpool:Resetting dropped connection: s3.amazonaws.com
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/piqa/piqa.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /parquet?dataset=piqa HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/piqa/piqa.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/piqa/revision/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0 HTTP/1.1" 307 109
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/ybisk/piqa/revision/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0 HTTP/1.1" 200 3275
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/piqa/resolve/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/ybisk/piqa/resolve/2e8ac2dffd59bac8c3c6714948f4c551a0848bb0/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:filelock:Attempting to acquire lock 139746190773216 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Lock 139746190773216 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Attempting to release lock 139746190773216 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Lock 139746190773216 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Attempting to acquire lock 139746190778832 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_piqa_plain_text_1.1.0_6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011.lock
+DEBUG:filelock:Lock 139746190778832 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_piqa_plain_text_1.1.0_6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190778832 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_piqa_plain_text_1.1.0_6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011.lock
+DEBUG:filelock:Lock 139746190778832 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_piqa_plain_text_1.1.0_6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011.lock
+DEBUG:filelock:Attempting to acquire lock 139746190774848 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Lock 139746190774848 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Attempting to release lock 139746190774848 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Lock 139746190774848 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/piqa.lock
+DEBUG:filelock:Attempting to acquire lock 139746190777680 on /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011_builder.lock
+DEBUG:filelock:Lock 139746190777680 acquired on /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190777680 on /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011_builder.lock
+DEBUG:filelock:Lock 139746190777680 released on /home/intern/.cache/huggingface/datasets/piqa/plain_text/1.1.0/6c611c1a9bf220943c4174e117d3b660859665baf1d43156230116185312d011_builder.lock
+DEBUG:lm_eval.api.task:No custom filters defined. Using default 'take_first' filter for handling repeats.
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746185855040 on /home/intern/.cache/huggingface/hub/.locks/datasets--allenai--ai2_arc/d50d3b885a6d04fe8cb16cc9947f64dff0ba941a.lock
+DEBUG:filelock:Lock 139746185855040 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--allenai--ai2_arc/d50d3b885a6d04fe8cb16cc9947f64dff0ba941a.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/allenai/ai2_arc/resolve/main/README.md HTTP/1.1" 200 9001
+DEBUG:filelock:Attempting to release lock 139746185855040 on /home/intern/.cache/huggingface/hub/.locks/datasets--allenai--ai2_arc/d50d3b885a6d04fe8cb16cc9947f64dff0ba941a.lock
+DEBUG:filelock:Lock 139746185855040 released on /home/intern/.cache/huggingface/hub/.locks/datasets--allenai--ai2_arc/d50d3b885a6d04fe8cb16cc9947f64dff0ba941a.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/revision/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 3518
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=allenai/ai2_arc HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/revision/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 3518
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453?recursive=False&expand=False HTTP/1.1" 200 397
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Challenge?recursive=False&expand=False HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/revision/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 3518
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 239
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453/ARC-Easy?recursive=False&expand=False HTTP/1.1" 200 951
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 239
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 239
+DEBUG:filelock:Attempting to acquire lock 139746185869536 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Easy_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Lock 139746185869536 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Easy_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746185869536 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Easy_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Lock 139746185869536 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Easy_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Attempting to acquire lock 139746190782192 on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:filelock:Lock 139746190782192 acquired on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190782192 on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:filelock:Lock 139746190782192 released on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Easy/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:lm_eval.api.task:No custom filters defined. Using default 'take_first' filter for handling repeats.
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ai2_arc.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/allenai/ai2_arc/allenai/ai2_arc.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=allenai/ai2_arc HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/allenai/ai2_arc/paths-info/210d026faf9955653af8916fad021475a3f00453 HTTP/1.1" 200 244
+DEBUG:filelock:Attempting to acquire lock 139746190775328 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Challenge_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Lock 139746190775328 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Challenge_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190775328 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Challenge_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Lock 139746190775328 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_allenai___ai2_arc_ARC-Challenge_0.0.0_210d026faf9955653af8916fad021475a3f00453.lock
+DEBUG:filelock:Attempting to acquire lock 139746190775328 on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:filelock:Lock 139746190775328 acquired on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190775328 on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:filelock:Lock 139746190775328 released on /home/intern/.cache/huggingface/datasets/allenai___ai2_arc/ARC-Challenge/0.0.0/210d026faf9955653af8916fad021475a3f00453_builder.lock
+DEBUG:lm_eval.api.task:No custom filters defined. Using default 'take_first' filter for handling repeats.
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/hellaswag/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Rowan/hellaswag/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190782960 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/f16f0327415e219d01021e9e24e46640b6f2abbc.lock
+DEBUG:filelock:Lock 139746190782960 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/f16f0327415e219d01021e9e24e46640b6f2abbc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/Rowan/hellaswag/resolve/main/README.md HTTP/1.1" 200 6845
+DEBUG:filelock:Attempting to release lock 139746190782960 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/f16f0327415e219d01021e9e24e46640b6f2abbc.lock
+DEBUG:filelock:Lock 139746190782960 released on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/f16f0327415e219d01021e9e24e46640b6f2abbc.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/hellaswag.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Rowan/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/hellaswag.py HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190783008 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/0a55a269362daedcee579a2483a2f53a4a8160f0.lock
+DEBUG:filelock:Lock 139746190783008 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/0a55a269362daedcee579a2483a2f53a4a8160f0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/Rowan/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/hellaswag.py HTTP/1.1" 200 4358
+DEBUG:filelock:Attempting to release lock 139746190783008 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/0a55a269362daedcee579a2483a2f53a4a8160f0.lock
+DEBUG:filelock:Lock 139746190783008 released on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/0a55a269362daedcee579a2483a2f53a4a8160f0.lock
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/hellaswag/hellaswag.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /parquet?dataset=hellaswag HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/hellaswag/hellaswag.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/hellaswag/revision/6002345709e0801764318f06bf06ce1e7d1a1fe3 HTTP/1.1" 307 114
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Rowan/hellaswag/revision/6002345709e0801764318f06bf06ce1e7d1a1fe3 HTTP/1.1" 200 1816
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Rowan/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/dataset_infos.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746185857776 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/928cece4c4214a28a0070e59ba136e66c08b00b1.lock
+DEBUG:filelock:Lock 139746185857776 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/928cece4c4214a28a0070e59ba136e66c08b00b1.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/Rowan/hellaswag/resolve/6002345709e0801764318f06bf06ce1e7d1a1fe3/dataset_infos.json HTTP/1.1" 200 2526
+DEBUG:filelock:Attempting to release lock 139746185857776 on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/928cece4c4214a28a0070e59ba136e66c08b00b1.lock
+DEBUG:filelock:Lock 139746185857776 released on /home/intern/.cache/huggingface/hub/.locks/datasets--hellaswag/928cece4c4214a28a0070e59ba136e66c08b00b1.lock
+DEBUG:filelock:Attempting to acquire lock 139746190781040 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Lock 139746190781040 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Attempting to release lock 139746190781040 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Lock 139746190781040 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Attempting to acquire lock 139714294954352 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_hellaswag_default_0.1.0_512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae.lock
+DEBUG:filelock:Lock 139714294954352 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_hellaswag_default_0.1.0_512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139714294954352 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_hellaswag_default_0.1.0_512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae.lock
+DEBUG:filelock:Lock 139714294954352 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_hellaswag_default_0.1.0_512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae.lock
+DEBUG:filelock:Attempting to acquire lock 139714294951808 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Lock 139714294951808 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Attempting to release lock 139714294951808 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Lock 139714294951808 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/hellaswag.lock
+DEBUG:filelock:Attempting to acquire lock 139714294953728 on /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae_builder.lock
+DEBUG:filelock:Lock 139714294953728 acquired on /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139714294953728 on /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae_builder.lock
+DEBUG:filelock:Lock 139714294953728 released on /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae_builder.lock
+DEBUG:lm_eval.api.task:No custom filters defined. Using default 'take_first' filter for handling repeats.
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae/tmpkxnvyw7b
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/hellaswag/default/0.1.0/512a66dd8b1b1643ab4a48aa4f150d04c91680da6a4096498a5e5f799623d5ae/tmpekqktjdx
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/winogrande/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/winogrande/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190772064 on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/9b4b476a64a25735f0adc7dd7e16780937492052.lock
+DEBUG:filelock:Lock 139746190772064 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/9b4b476a64a25735f0adc7dd7e16780937492052.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/allenai/winogrande/resolve/main/README.md HTTP/1.1" 200 9967
+DEBUG:filelock:Attempting to release lock 139746190772064 on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/9b4b476a64a25735f0adc7dd7e16780937492052.lock
+DEBUG:filelock:Lock 139746190772064 released on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/9b4b476a64a25735f0adc7dd7e16780937492052.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/winogrande/resolve/85ac5b5a3b7a930e22d590176e39460400d19e41/winogrande.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/winogrande/resolve/85ac5b5a3b7a930e22d590176e39460400d19e41/winogrande.py HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139746190775088 on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/b042703b3beb5fdbdf692975a6633a22dc9761cf.lock
+DEBUG:filelock:Lock 139746190775088 acquired on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/b042703b3beb5fdbdf692975a6633a22dc9761cf.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /datasets/allenai/winogrande/resolve/85ac5b5a3b7a930e22d590176e39460400d19e41/winogrande.py HTTP/1.1" 200 5649
+DEBUG:filelock:Attempting to release lock 139746190775088 on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/b042703b3beb5fdbdf692975a6633a22dc9761cf.lock
+DEBUG:filelock:Lock 139746190775088 released on /home/intern/.cache/huggingface/hub/.locks/datasets--winogrande/b042703b3beb5fdbdf692975a6633a22dc9761cf.lock
+DEBUG:urllib3.connectionpool:Resetting dropped connection: s3.amazonaws.com
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/winogrande/winogrande.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /parquet?dataset=winogrande HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/winogrande/winogrande.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/winogrande/revision/85ac5b5a3b7a930e22d590176e39460400d19e41 HTTP/1.1" 307 117
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/allenai/winogrande/revision/85ac5b5a3b7a930e22d590176e39460400d19e41 HTTP/1.1" 200 3715
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/winogrande/resolve/85ac5b5a3b7a930e22d590176e39460400d19e41/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/allenai/winogrande/resolve/85ac5b5a3b7a930e22d590176e39460400d19e41/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:filelock:Attempting to acquire lock 139746190776528 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Lock 139746190776528 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Attempting to release lock 139746190776528 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Lock 139746190776528 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Attempting to acquire lock 139746190782144 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_winogrande_winogrande_xl_1.1.0_a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2.lock
+DEBUG:filelock:Lock 139746190782144 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_winogrande_winogrande_xl_1.1.0_a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190782144 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_winogrande_winogrande_xl_1.1.0_a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2.lock
+DEBUG:filelock:Lock 139746190782144 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_winogrande_winogrande_xl_1.1.0_a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2.lock
+DEBUG:filelock:Attempting to acquire lock 139714294940912 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Lock 139714294940912 acquired on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Attempting to release lock 139714294940912 on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Lock 139714294940912 released on /home/intern/.cache/huggingface/modules/datasets_modules/datasets/winogrande.lock
+DEBUG:filelock:Attempting to acquire lock 139746190784592 on /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2_builder.lock
+DEBUG:filelock:Lock 139746190784592 acquired on /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139746190784592 on /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2_builder.lock
+DEBUG:filelock:Lock 139746190784592 released on /home/intern/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2_builder.lock
+DEBUG:lm_eval.api.task:No custom filters defined. Using default 'take_first' filter for handling repeats.
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of winogrande from None to 0
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of hellaswag from None to 0
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of arc_challenge from None to 0
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of arc_easy from None to 0
+WARNING:lm_eval.evaluator:Overwriting default num_fewshot of piqa from None to 0
+INFO:lm_eval.api.task:Building contexts for winogrande on rank 0...
+DEBUG:lm_eval.evaluator:Task: winogrande; number of requests on this rank: 2534
+INFO:lm_eval.api.task:Building contexts for hellaswag on rank 0...
+DEBUG:lm_eval.evaluator:Task: hellaswag; number of requests on this rank: 40168
+INFO:lm_eval.api.task:Building contexts for arc_challenge on rank 0...
+DEBUG:lm_eval.evaluator:Task: arc_challenge; number of requests on this rank: 4687
+INFO:lm_eval.api.task:Building contexts for arc_easy on rank 0...
+DEBUG:lm_eval.evaluator:Task: arc_easy; number of requests on this rank: 9501
+INFO:lm_eval.api.task:Building contexts for piqa on rank 0...
+DEBUG:lm_eval.evaluator:Task: piqa; number of requests on this rank: 3676
+INFO:lm_eval.evaluator:Running loglikelihood requests
+DEBUG:lm_eval.models.huggingface:Failed to get model SHA for LlamaForCausalLM_KIVI(
+  (model): LlamaModel_KIVI(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer_KIVI(
+        (self_attn): LlamaAttention_KIVI(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+) at revision main. Error: Repo id must be a string, not <class 'models.llama_kivi.LlamaForCausalLM_KIVI'>: 'LlamaForCausalLM_KIVI(
+  (model): LlamaModel_KIVI(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer_KIVI(
+        (self_attn): LlamaAttention_KIVI(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)'.
+INFO:__main__:|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.4352|±  |0.0145|
+|             |       |none  |     0|acc_norm|↑  |0.4625|±  |0.0146|
+|arc_easy     |      1|none  |     0|acc     |↑  |0.7630|±  |0.0087|
+|             |       |none  |     0|acc_norm|↑  |0.7462|±  |0.0089|
+|hellaswag    |      1|none  |     0|acc     |↑  |0.5712|±  |0.0049|
+|             |       |none  |     0|acc_norm|↑  |0.7601|±  |0.0043|
+|piqa         |      1|none  |     0|acc     |↑  |0.7807|±  |0.0097|
+|             |       |none  |     0|acc_norm|↑  |0.7911|±  |0.0095|
+|winogrande   |      1|none  |     0|acc     |↑  |0.6890|±  |0.0130|
+
+INFO:__main__:Average Acc: 64.78%
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139629995229040 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139629995229040 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139629995229040 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139629995229040 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139630333428160 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139630333428160 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139630333428160 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139630333428160 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139630333428688 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139630333428688 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139630333428688 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139630333428688 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139630333428688 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139630333428688 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139630333428688 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139630333428688 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+WARNING:accelerate.big_modeling:You shouldn't move a model that is dispatched using accelerate hooks.
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 140317518950128 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140317518950128 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140317518950128 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140317518950128 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 140317518939568 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140317518939568 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140317518939568 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140317518939568 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 140317517479648 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140317517479648 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140317517479648 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 140317517479648 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 140317517466256 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140317517466256 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 140317517466256 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 140317517466256 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139617184361792 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139617184361792 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139617184361792 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139617184361792 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139617184352192 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139617184352192 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139617184352192 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139617184352192 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139617377107680 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139617377107680 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139617377107680 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139617377107680 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139617377094480 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139617377094480 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139617377094480 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139617377094480 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139802798763760 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139802798763760 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139802798763760 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139802798763760 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139802798752672 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139802798752672 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139802798752672 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139802798752672 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Resetting dropped connection: s3.amazonaws.com
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139802575350288 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139802575350288 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139802575350288 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139802575350288 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139802574978592 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139802574978592 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139802574978592 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139802574978592 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+INFO:__main__:wikitext2 perplexity: 5.47
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): datasets-server.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 307 143
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3?recursive=False&expand=False HTTP/1.1" 200 619
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 307 163
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1?recursive=False&expand=False HTTP/1.1" 200 1017
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 307 161
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/tree/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1?recursive=False&expand=False HTTP/1.1" 200 751
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139830814174912 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139830814174912 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139830814174912 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139830814174912 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139830814164832 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139830814164832 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139830814164832 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139830814164832 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/main/README.md HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/main/README.md HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext.py HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/wikitext/wikitext.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://datasets-server.huggingface.co:443 "GET /info?dataset=wikitext HTTP/1.1" 404 None
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 118
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/datasets/Salesforce/wikitext/revision/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 5016
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 250
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 307 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_infos.json HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 307 120
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "POST /api/datasets/Salesforce/wikitext/paths-info/b08601e04326c79dfdd32d625aee71d232d685c3 HTTP/1.1" 200 248
+DEBUG:filelock:Attempting to acquire lock 139830816115488 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139830816115488 acquired on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139830816115488 on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Lock 139830816115488 released on /home/intern/.cache/huggingface/datasets/_home_intern_.cache_huggingface_datasets_wikitext_wikitext-2-raw-v1_0.0.0_b08601e04326c79dfdd32d625aee71d232d685c3.lock
+DEBUG:filelock:Attempting to acquire lock 139830816128784 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139830816128784 acquired on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:fsspec.local:open file: /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/dataset_info.json
+DEBUG:filelock:Attempting to release lock 139830816128784 on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock
+DEBUG:filelock:Lock 139830816128784 released on /home/intern/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3_builder.lock

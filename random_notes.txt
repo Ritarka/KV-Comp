@@ -1,0 +1,19 @@
+Flash
+model:meta-llama/Llama-2-7b-hf
+Used time: 10260.25 ms
+Peak memory: 16.73 GB
+Throughput: 790.62 tokens/sec
+Throughput: 2.34 prompts/sec
+Cache Memory Used: 12.56 GB
+Cache Memory Free: 4.66 GB
+Cache Utilization: 72.96%
+
+non-Flash
+model:meta-llama/Llama-2-7b-hf
+Used time: 10261.45 ms
+Peak memory: 16.73 GB
+Throughput: 790.53 tokens/sec
+Throughput: 2.34 prompts/sec
+Cache Memory Used: 12.56 GB
+Cache Memory Free: 4.72 GB
+Cache Utilization: 72.68%
