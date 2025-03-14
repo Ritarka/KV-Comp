@@ -16,10 +16,172 @@ from transformers.modeling_attn_mask_utils import _prepare_4d_causal_attention_m
 from transformers.models.llama.configuration_llama import LlamaConfig
 from transformers.models.llama.modeling_llama import LlamaRotaryEmbedding, LlamaAttention, apply_rotary_pos_emb
 
+from nvidia import nvcomp
+import time
+
 _CONFIG_FOR_DOC = "LlamaConfig"
+
+time_taken = [0 for i in range(4)]
+
+def timer(argument):
+    def timer_d(function):
+        def wrapper(*args, **kwargs):
+            start_time = time.perf_counter()
+
+            result = function(*args, **kwargs)
+
+            end_time = time.perf_counter()
+            elapsed_time = end_time - start_time
+            time_taken[argument] += elapsed_time
+            
+            return result
+        return wrapper
+    return timer_d
+
+@timer(0)
+def quantize(array: torch.Tensor, num_bits: int):
+    assert num_bits <= 8, "Just need to change the quantizes astype"
+    
+    num_levels = 2 ** num_bits
+    min_val = array.min()
+    max_val = array.max()
+    scale = (max_val - min_val) / (num_levels - 1)
+    offset = min_val
+
+    quantized = torch.round((array - offset) / scale).to(torch.int8)
+    return quantized, scale, offset
+
+@timer(1)
+def dequantize(quantized: torch.Tensor, scale: float, offset: float):
+    return quantized.float() * scale + offset
+
+@timer(2)
+def compress_with_nvcomp(tensor: torch.Tensor):
+    if not tensor.is_cuda:
+        tensor = tensor.to("cuda", non_blocking=True)  # Avoid unnecessary sync
+
+    nvarr_txt_d = nvcomp.as_array(tensor)
+    codec = nvcomp.Codec(algorithm="Zstd", bitstream_kind=nvcomp.BitstreamKind.NVCOMP_NATIVE)
+
+    return codec.encode(nvarr_txt_d)
+
+@timer(3)
+def decompress_with_nvcomp(compressed_arr):
+    codec = nvcomp.Codec(algorithm="Zstd", bitstream_kind=nvcomp.BitstreamKind.NVCOMP_NATIVE)
+    return torch.tensor(codec.decode(compressed_arr).cpu().numpy())
 
 
 class LlamaAttention_Compression(nn.Module):
+    """Multi-headed attention from 'Attention Is All You Need' paper"""
+
+    def __init__(self, config: LlamaConfig):
+        super().__init__()
+        self.config = config
+        self.hidden_size = config.hidden_size
+        self.num_heads = config.num_attention_heads
+        self.head_dim = self.hidden_size // self.num_heads
+        self.max_position_embeddings = config.max_position_embeddings
+
+        if (self.head_dim * self.num_heads) != self.hidden_size:
+            raise ValueError(
+                f"hidden_size must be divisible by num_heads (got `hidden_size`: {self.hidden_size}"
+                f" and `num_heads`: {self.num_heads})."
+            )
+        self.q_proj = nn.Linear(self.hidden_size, self.num_heads * self.head_dim, bias=False)
+        self.k_proj = nn.Linear(self.hidden_size, self.num_heads * self.head_dim, bias=False)
+        self.v_proj = nn.Linear(self.hidden_size, self.num_heads * self.head_dim, bias=False)
+        self.o_proj = nn.Linear(self.num_heads * self.head_dim, self.hidden_size, bias=False)
+        self.rotary_emb = LlamaRotaryEmbedding(self.head_dim, max_position_embeddings=self.max_position_embeddings)
+        # self.rotary_emb.to(device="cuda")
+
+    def _shape(self, tensor: torch.Tensor, seq_len: int, bsz: int):
+        return tensor.view(bsz, seq_len, self.num_heads, self.head_dim).transpose(1, 2).contiguous()
+
+    def forward(
+        self,
+        hidden_states: torch.Tensor,
+        attention_mask: Optional[torch.Tensor] = None,
+        position_ids: Optional[torch.LongTensor] = None,
+        past_key_value: Optional[Tuple[torch.Tensor]] = None,
+        output_attentions: bool = False,
+        use_cache: bool = False,
+    ) -> Tuple[torch.Tensor, Optional[torch.Tensor], Optional[Tuple[torch.Tensor]]]:
+        bsz, q_len, _ = hidden_states.size()
+
+        query_states = self.q_proj(hidden_states).view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
+        key_states = self.k_proj(hidden_states).view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
+        value_states = self.v_proj(hidden_states).view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
+
+        kv_seq_len = key_states.shape[-2]
+        if past_key_value is not None:
+            kv_seq_len += past_key_value[0].shape[-2]
+        cos, sin = self.rotary_emb(value_states, position_ids)
+        query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin, position_ids)
+        # [bsz, nh, t, hd]
+
+        if past_key_value is not None:
+            # reuse k, v, self_attention
+            # **Decompress and dequantize past key_value**
+            past_k_quantized, past_v_quantized, past_scale_k, past_scale_v, past_offset_k, past_offset_v = past_key_value
+            past_k = dequantize(decompress_with_nvcomp(past_k_quantized), past_scale_k, past_offset_k)
+            past_v = dequantize(decompress_with_nvcomp(past_v_quantized), past_scale_v, past_offset_v)
+            
+            # past_k = dequantize(decompress_with_nvcomp(past_k_quantized), past_scale_k, past_offset_k)
+            # past_v = dequantize(decompress_with_nvcomp(past_v_quantized), past_scale_v, past_offset_v)
+
+
+            # Concatenate past and current key-value states
+            key_states = torch.cat([past_k, key_states], dim=2)
+            value_states = torch.cat([past_v, value_states], dim=2)
+
+        # **Quantize and compress KV cache for storage**
+        q_k, scale_k, offset_k = quantize(key_states, num_bits=2)
+        q_v, scale_v, offset_v = quantize(value_states, num_bits=2)
+        compressed_k = compress_with_nvcomp(q_k)
+        compressed_v = compress_with_nvcomp(q_v)
+
+        past_key_value = (compressed_k, compressed_v, scale_k, scale_v, offset_k, offset_v) if use_cache else None
+
+        attn_weights = torch.matmul(query_states, key_states.transpose(2, 3)) / math.sqrt(self.head_dim)
+
+        if attn_weights.size() != (bsz, self.num_heads, q_len, kv_seq_len):
+            raise ValueError(
+                f"Attention weights should be of size {(bsz, self.num_heads, q_len, kv_seq_len)}, but is"
+                f" {attn_weights.size()}"
+            )
+
+        if attention_mask is not None:
+            if attention_mask.size() != (bsz, 1, q_len, kv_seq_len):
+                raise ValueError(
+                    f"Attention mask should be of size {(bsz, 1, q_len, kv_seq_len)}, but is {attention_mask.size()}"
+                )
+            attn_weights = attn_weights + attention_mask
+            attn_weights = torch.max(attn_weights, torch.tensor(torch.finfo(attn_weights.dtype).min))
+
+        # upcast attention to fp32
+        attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query_states.dtype)
+        attn_output = torch.matmul(attn_weights, value_states)
+
+        if attn_output.size() != (bsz, self.num_heads, q_len, self.head_dim):
+            raise ValueError(
+                f"`attn_output` should be of size {(bsz, self.num_heads, q_len, self.head_dim)}, but is"
+                f" {attn_output.size()}"
+            )
+
+        attn_output = attn_output.transpose(1, 2)
+        attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
+
+        attn_output = self.o_proj(attn_output)
+
+        if not output_attentions:
+            attn_weights = None
+            
+        # print(time_taken)
+
+        return attn_output, attn_weights, past_key_value
+
+
+class LlamaAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
     def __init__(self, config: LlamaConfig):
@@ -109,76 +271,6 @@ class LlamaAttention_Compression(nn.Module):
             attn_weights = None
 
         return attn_output, attn_weights, past_key_value
-
-
-class LlamaAttention(nn.Module):
-    def __init__(self, config):
-        super().__init__()
-        self.hidden_size = config.hidden_size
-        self.num_heads = config.num_attention_heads
-        self.head_dim = self.hidden_size // self.num_heads
-        self.kv_heads = config.num_key_value_heads
-        self.kv_group_size = self.num_heads // self.kv_heads
-        self.max_seq_len = config.max_position_embeddings
-
-        assert self.hidden_size % self.num_heads == 0, "hidden_size must be divisible by num_heads"
-
-        # Projection layers
-        self.q_proj = nn.Linear(self.hidden_size, self.hidden_size, bias=config.attention_bias)
-        self.k_proj = nn.Linear(self.hidden_size, self.hidden_size, bias=config.attention_bias)
-        self.v_proj = nn.Linear(self.hidden_size, self.hidden_size, bias=config.attention_bias)
-        self.o_proj = nn.Linear(self.hidden_size, self.hidden_size, bias=config.attention_bias)
-
-        # Cache for KV tensors
-        self.k_cache = None
-        self.v_cache = None
-
-        # Rotary embeddings
-        self.rotary_emb = RotaryEmbedding(self.head_dim)
-
-    def forward(self, hidden_states, attention_mask=None, past_key_values=None, use_cache=False):
-        batch_size, seq_len, _ = hidden_states.shape
-
-        # Compute query, key, value
-        q = self.q_proj(hidden_states)
-        k = self.k_proj(hidden_states)
-        v = self.v_proj(hidden_states)
-
-        # Reshape to (batch, num_heads, seq_len, head_dim)
-        q = q.view(batch_size, seq_len, self.num_heads, self.head_dim).transpose(1, 2)
-        k = k.view(batch_size, seq_len, self.kv_heads, self.head_dim).transpose(1, 2)
-        v = v.view(batch_size, seq_len, self.kv_heads, self.head_dim).transpose(1, 2)
-
-        # Apply rotary embeddings to q and k
-        q, k = self.rotary_emb(q, k)
-
-        # Handle KV cache
-        if past_key_values is not None:
-            k = torch.cat([past_key_values[0], k], dim=-2)
-            v = torch.cat([past_key_values[1], v], dim=-2)
-
-        # Update cache if needed
-        if use_cache:
-            past_key_values = (k, v)
-
-        # Expand keys/values to match number of heads
-        k = k.repeat_interleave(self.kv_group_size, dim=1)
-        v = v.repeat_interleave(self.kv_group_size, dim=1)
-
-        # Scaled dot-product attention
-        attn_weights = torch.matmul(q, k.transpose(-2, -1)) / math.sqrt(self.head_dim)
-
-        if attention_mask is not None:
-            attn_weights = attn_weights + attention_mask
-
-        attn_weights = F.softmax(attn_weights, dim=-1)
-        attn_output = torch.matmul(attn_weights, v)
-
-        # Reshape and project output
-        attn_output = attn_output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.hidden_size)
-        attn_output = self.o_proj(attn_output)
-
-        return attn_output, past_key_values
 
 class RotaryEmbedding(nn.Module):
     """ Applies rotary positional embeddings to queries and keys """
@@ -512,7 +604,8 @@ class LlamaDecoderLayer_KIVI(nn.Module):
         super().__init__()
         self.hidden_size = config.hidden_size
         self.self_attn = (
-            LlamaAttention_Compression(config=config)
+            LlamaAttention(config=config)
+            # LlamaAttention_Compression(config=config)
             if not getattr(config, "use_flash", False)
             else LlamaFlashAttention_KIVI(config=config)
         )
