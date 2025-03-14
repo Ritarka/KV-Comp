@@ -143,8 +143,8 @@ def evaluate(model, tokenizer):
     
     # import pdb;pdb.set_trace()
     block_class_name = model.model.layers[0].__class__.__name__
-    # device_map = infer_auto_device_map(model, max_memory={i: "24GiB" for i in range(torch.cuda.device_count())}, no_split_module_classes=[block_class_name])
-    # model = dispatch_model(model, device_map=device_map)
+    device_map = infer_auto_device_map(model, max_memory={i: "24GiB" for i in range(torch.cuda.device_count())}, no_split_module_classes=[block_class_name])
+    model = dispatch_model(model, device_map=device_map)
     results = {}
 
     # we don't need c4 now, can add it in later
@@ -214,7 +214,7 @@ model = LlamaForCausalLM_KIVI.from_pretrained(
     cache_dir=CACHE_DIR,
     torch_dtype=torch.float16,
     low_cpu_mem_usage=True,
-    device_map="cpu",
+    device_map="auto",
 )
 # model.to(device)
     
