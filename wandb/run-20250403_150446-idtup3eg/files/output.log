@@ -1,0 +1,36 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Batch Size: 4, Runtime: 520.16ms, Peak Memory: 0.00GB, Throughput: 2460.79 tokens/s, Cache Utilization: 0.00%
+Batch Size: 8, Runtime: 25.28ms, Peak Memory: 0.00GB, Throughput: 101284.93 tokens/s, Cache Utilization: 0.00%
+Batch Size: 12, Runtime: 32.95ms, Peak Memory: 0.00GB, Throughput: 116544.70 tokens/s, Cache Utilization: 0.00%
+Batch Size: 16, Runtime: 44.40ms, Peak Memory: 0.00GB, Throughput: 115325.90 tokens/s, Cache Utilization: 0.00%
+Batch Size: 20, Runtime: 46.70ms, Peak Memory: 0.00GB, Throughput: 137055.46 tokens/s, Cache Utilization: 0.00%
+Batch Size: 24, Runtime: 68.52ms, Peak Memory: 0.00GB, Throughput: 112079.27 tokens/s, Cache Utilization: 0.00%
+Batch Size: 28, Runtime: 102.91ms, Peak Memory: 0.00GB, Throughput: 87064.72 tokens/s, Cache Utilization: 0.00%
+Batch Size: 32, Runtime: 109.91ms, Peak Memory: 0.00GB, Throughput: 93164.50 tokens/s, Cache Utilization: 0.00%
+Batch Size: 36, Runtime: 132.92ms, Peak Memory: 0.00GB, Throughput: 86671.76 tokens/s, Cache Utilization: 0.00%
+Batch Size: 40, Runtime: 137.33ms, Peak Memory: 0.00GB, Throughput: 93203.20 tokens/s, Cache Utilization: 0.00%
+Batch Size: 44, Runtime: 151.61ms, Peak Memory: 0.00GB, Throughput: 92867.59 tokens/s, Cache Utilization: 0.00%
+Batch Size: 48, Runtime: 159.56ms, Peak Memory: 0.00GB, Throughput: 96262.59 tokens/s, Cache Utilization: 0.00%
+CUDA memory error at batch size 52. Stopping.
+CUDA out of memory. Tried to allocate 814.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 591.25 MiB is free. Including non-PyTorch memory, this process has 23.04 GiB memory in use. Of the allocated memory 19.99 GiB is allocated by PyTorch, and 2.60 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Allocated memory: 12.559227466583252 GB
+Max allocated memory: 20.15504217147827 GB
+Total GPU memory: 23.64288330078125 GB
+Loading checkpoint shards:  50%|█████████████████████████████████████████████████▌                                                 | 1/2 [00:02<00:02,  2.18s/it]
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 579, in <module>
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3903, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4377, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 933, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 330, in set_module_tensor_to_device
+    new_value = value.to(device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 23.25 MiB is free. Including non-PyTorch memory, this process has 23.60 GiB memory in use. Of the allocated memory 23.13 GiB is allocated by PyTorch, and 12.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

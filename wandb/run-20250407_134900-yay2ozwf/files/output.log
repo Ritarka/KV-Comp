@@ -1,0 +1,52 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.21s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 553.14ms, Peak Memory: 12.80GB, Throughput: 2314.06 tokens/s, Cache Utilization: 54.17%
+Batch Size: 8, Runtime: 46.42ms, Peak Memory: 13.26GB, Throughput: 55153.34 tokens/s, Cache Utilization: 56.09%
+Batch Size: 12, Runtime: 76.41ms, Peak Memory: 13.71GB, Throughput: 50254.54 tokens/s, Cache Utilization: 58.03%
+Batch Size: 16, Runtime: 85.35ms, Peak Memory: 14.17GB, Throughput: 59989.43 tokens/s, Cache Utilization: 59.95%
+Batch Size: 20, Runtime: 113.62ms, Peak Memory: 14.62GB, Throughput: 56328.44 tokens/s, Cache Utilization: 61.87%
+Batch Size: 24, Runtime: 133.45ms, Peak Memory: 15.08GB, Throughput: 57549.84 tokens/s, Cache Utilization: 63.81%
+Batch Size: 28, Runtime: 162.53ms, Peak Memory: 15.53GB, Throughput: 55129.27 tokens/s, Cache Utilization: 65.70%
+Batch Size: 32, Runtime: 178.65ms, Peak Memory: 15.98GB, Throughput: 57317.43 tokens/s, Cache Utilization: 67.60%
+Batch Size: 36, Runtime: 213.11ms, Peak Memory: 16.44GB, Throughput: 54055.87 tokens/s, Cache Utilization: 69.55%
+Batch Size: 40, Runtime: 228.98ms, Peak Memory: 16.90GB, Throughput: 55900.59 tokens/s, Cache Utilization: 71.51%
+Batch Size: 44, Runtime: 257.09ms, Peak Memory: 17.36GB, Throughput: 54767.05 tokens/s, Cache Utilization: 73.45%
+Batch Size: 48, Runtime: 274.26ms, Peak Memory: 17.81GB, Throughput: 56004.27 tokens/s, Cache Utilization: 75.35%
+Batch Size: 52, Runtime: 305.24ms, Peak Memory: 18.26GB, Throughput: 54515.35 tokens/s, Cache Utilization: 77.28%
+Batch Size: 56, Runtime: 318.58ms, Peak Memory: 18.72GB, Throughput: 56249.67 tokens/s, Cache Utilization: 79.21%
+Batch Size: 60, Runtime: 354.60ms, Peak Memory: 19.17GB, Throughput: 54144.80 tokens/s, Cache Utilization: 81.12%
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 579, in <module>
+    benchmark_results_kivi = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 240, in benchmark_model
+    outputs = model(batch)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 862, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 751, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 611, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 436, in forward
+    key_states_quant_trans, key_scale_trans, key_mn_trans = triton_quantize_and_pack_along_last_dim(key_states_quant.transpose(2, 3).contiguous(), self.group_size, self.k_bits)
+  File "/home/intern/ritarka/KV-Comp/quant/new_pack.py", line 239, in triton_quantize_and_pack_along_last_dim
+    data = data - mn.unsqueeze(-1)
+KeyboardInterrupt

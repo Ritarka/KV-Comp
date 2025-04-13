@@ -62,6 +62,8 @@ num_repeats = 3
 for _ in range(batch_size):
     string = 't,' * (prompt_length // 2)
     context.append(string[:-1])
+
+print(f"context{context}")
 inputs = tokenizer(context, return_tensors="pt").to('cuda')
 input_ids = inputs['input_ids']
 

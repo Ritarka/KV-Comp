@@ -1,0 +1,58 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+torch.Size([4, 161])
+CUDA memory error at batch size 4. Stopping.
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 248, in benchmark_model
+    outputs = model.generate(**inputs, max_new_tokens=338)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 1989, in generate
+    result = self._sample(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 2932, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 862, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 751, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 624, in forward
+    hidden_states = self.post_attention_layernorm(hidden_states)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 72, in forward
+    return self.weight * hidden_states.to(input_dtype)
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 412, in <module>
+    benchmark_results_kivi = benchmark_kivi()
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 359, in benchmark_kivi
+    torch.cuda.empty_cache()
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/cuda/memory.py", line 170, in empty_cache
+    torch._C._cuda_emptyCache()
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

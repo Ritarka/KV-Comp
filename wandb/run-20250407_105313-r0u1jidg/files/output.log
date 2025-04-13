@@ -1,0 +1,43 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.13s/it]
+Starting benchmark...
+get_wikitext2
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 577, in <module>
+    benchmark_results_kivi = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 238, in benchmark_model
+    outputs = model.generate(**inputs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 1989, in generate
+    result = self._sample(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 2932, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 862, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 751, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 611, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 375, in forward
+    attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query_states.dtype)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/functional.py", line 1890, in softmax
+    ret = input.softmax(dim, dtype=dtype)
+KeyboardInterrupt

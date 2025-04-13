@@ -1,0 +1,68 @@
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+`LlamaRotaryEmbedding` can now be fully parameterized by passing the model config through the `config` argument. All other arguments will be removed in v4.45
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention_Compression_Flash(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)
+Number of changes: 32
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Using Flash Attention with Compression
+hidden_states dtype: torch.float16
+q_proj dtype: torch.float16
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/calc_perplexity.py", line 350, in <module>
+    benchmark_results_ours = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/calc_perplexity.py", line 234, in benchmark_model
+    outputs = model(batch)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 1139, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 942, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 677, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/comp_replace.py", line 251, in forward
+    past_k = dequantize(decompress_with_nvcomp(past_key_value.key), past_key_value.scale_k, past_key_value.offset_k)
+AttributeError: 'DynamicCache' object has no attribute 'key'

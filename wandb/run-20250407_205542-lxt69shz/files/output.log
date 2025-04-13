@@ -1,0 +1,65 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.28s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 12820.13ms, Peak Memory: 13.24GB, Throughput: 99.84 tokens/s, Cache Utilization: 56.03%
+Batch Size: 8, Runtime: 12149.63ms, Peak Memory: 13.93GB, Throughput: 210.71 tokens/s, Cache Utilization: 58.93%
+Batch Size: 12, Runtime: 12179.63ms, Peak Memory: 14.61GB, Throughput: 315.28 tokens/s, Cache Utilization: 61.83%
+Batch Size: 16, Runtime: 12164.57ms, Peak Memory: 15.30GB, Throughput: 420.89 tokens/s, Cache Utilization: 64.72%
+Batch Size: 20, Runtime: 12411.77ms, Peak Memory: 15.98GB, Throughput: 515.64 tokens/s, Cache Utilization: 67.62%
+Batch Size: 24, Runtime: 12430.22ms, Peak Memory: 16.67GB, Throughput: 617.85 tokens/s, Cache Utilization: 70.52%
+Batch Size: 28, Runtime: 12607.17ms, Peak Memory: 17.35GB, Throughput: 710.71 tokens/s, Cache Utilization: 73.41%
+Batch Size: 32, Runtime: 12669.01ms, Peak Memory: 18.04GB, Throughput: 808.27 tokens/s, Cache Utilization: 76.31%
+Batch Size: 36, Runtime: 12903.21ms, Peak Memory: 18.72GB, Throughput: 892.80 tokens/s, Cache Utilization: 79.21%
+Batch Size: 40, Runtime: 13270.18ms, Peak Memory: 19.41GB, Throughput: 964.57 tokens/s, Cache Utilization: 82.10%
+Batch Size: 44, Runtime: 13667.66ms, Peak Memory: 20.09GB, Throughput: 1030.17 tokens/s, Cache Utilization: 85.00%
+Batch Size: 48, Runtime: 14206.92ms, Peak Memory: 20.77GB, Throughput: 1081.16 tokens/s, Cache Utilization: 87.90%
+Batch Size: 52, Runtime: 14767.30ms, Peak Memory: 21.46GB, Throughput: 1126.81 tokens/s, Cache Utilization: 90.79%
+Batch Size: 56, Runtime: 15310.96ms, Peak Memory: 22.14GB, Throughput: 1170.40 tokens/s, Cache Utilization: 93.69%
+CUDA memory error at batch size 60. Stopping.
+CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 14.50 MiB is free. Including non-PyTorch memory, this process has 23.45 GiB memory in use. Of the allocated memory 22.30 GiB is allocated by PyTorch, and 711.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.25s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 7159.59ms, Peak Memory: 13.55GB, Throughput: 178.78 tokens/s, Cache Utilization: 57.33%
+Batch Size: 8, Runtime: 7767.05ms, Peak Memory: 14.54GB, Throughput: 329.60 tokens/s, Cache Utilization: 61.51%
+Batch Size: 12, Runtime: 8627.94ms, Peak Memory: 15.53GB, Throughput: 445.07 tokens/s, Cache Utilization: 65.70%
+Batch Size: 16, Runtime: 9568.41ms, Peak Memory: 16.52GB, Throughput: 535.09 tokens/s, Cache Utilization: 69.89%
+Batch Size: 20, Runtime: 10821.23ms, Peak Memory: 17.51GB, Throughput: 591.43 tokens/s, Cache Utilization: 74.07%
+Batch Size: 24, Runtime: 11672.61ms, Peak Memory: 18.50GB, Throughput: 657.95 tokens/s, Cache Utilization: 78.26%
+Batch Size: 28, Runtime: 12679.05ms, Peak Memory: 19.49GB, Throughput: 706.68 tokens/s, Cache Utilization: 82.45%
+Batch Size: 32, Runtime: 13335.22ms, Peak Memory: 20.48GB, Throughput: 767.89 tokens/s, Cache Utilization: 86.63%
+Batch Size: 36, Runtime: 14764.91ms, Peak Memory: 21.46GB, Throughput: 780.23 tokens/s, Cache Utilization: 90.82%
+Batch Size: 40, Runtime: 15870.36ms, Peak Memory: 22.45GB, Throughput: 806.53 tokens/s, Cache Utilization: 95.01%
+CUDA memory error at batch size 44. Stopping.
+CUDA out of memory. Tried to allocate 160.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 156.50 MiB is free. Including non-PyTorch memory, this process has 23.31 GiB memory in use. Of the allocated memory 22.48 GiB is allocated by PyTorch, and 388.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.25s/it]
+Starting benchmark...
+get_wikitext2
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 624, in <module>
+    benchmark_results_ours = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 240, in benchmark_model
+    outputs = model.generate(**inputs, max_new_tokens=338)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 1989, in generate
+    result = self._sample(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 2932, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 964, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 817, in forward
+    attention_mask = _prepare_4d_causal_attention_mask(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_attn_mask_utils.py", line 317, in _prepare_4d_causal_attention_mask
+    key_value_length = input_shape[-1] + past_key_values_length
+TypeError: unsupported operand type(s) for +: 'int' and 'torch.Size'

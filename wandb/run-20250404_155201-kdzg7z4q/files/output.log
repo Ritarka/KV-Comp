@@ -1,0 +1,11 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 611, in <module>
+    benchmark_results_kivi = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 235, in benchmark_model
+    outputs = model.generate(**batch['input_ids'])
+IndexError: too many indices for tensor of dimension 2

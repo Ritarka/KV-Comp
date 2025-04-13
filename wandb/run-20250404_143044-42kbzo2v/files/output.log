@@ -1,0 +1,48 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.38s/it]
+Starting benchmark...
+get_wikitext2
+CUDA memory error at batch size 4. Stopping.
+CUDA out of memory. Tried to allocate 20.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 8.12 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 12.93 GiB memory in use. Process 2877549 has 7.72 GiB memory in use. Of the allocated memory 12.55 GiB is allocated by PyTorch, and 1.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Allocated memory: 0.0 GB
+Max allocated memory: 12.55129623413086 GB
+Total GPU memory: 23.64288330078125 GB
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.32s/it]
+Starting benchmark...
+get_wikitext2
+CUDA memory error at batch size 4. Stopping.
+CUDA out of memory. Tried to allocate 20.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 8.12 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 12.93 GiB memory in use. Process 2877549 has 7.72 GiB memory in use. Of the allocated memory 12.55 GiB is allocated by PyTorch, and 1.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.44s/it]
+Starting benchmark...
+get_wikitext2
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 608, in <module>
+    benchmark_results_kivi = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 200, in benchmark_model
+    testloader = get_loaders(dataset_name, tokenizer, seed=0, seqlen=128, test_only=True)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 68, in get_loaders
+    return get_wikitext2(tokenizer,train_size,val_size,seed,seqlen,test_only)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 38, in get_wikitext2
+    testenc = tokenizer("\n\n".join(testdata['text']), return_tensors='pt')
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3073, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3181, in _call_one
+    return self.encode_plus(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 3255, in encode_plus
+    return self._encode_plus(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils.py", line 788, in _encode_plus
+    first_ids = get_input_ids(text)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils.py", line 755, in get_input_ids
+    tokens = self.tokenize(text, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/tokenization_llama.py", line 247, in tokenize
+    tokens = super().tokenize(text, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/tokenization_utils.py", line 686, in tokenize
+    tokenized_text.extend(self._tokenize(token))
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/tokenization_llama.py", line 269, in _tokenize
+    tokens = self.sp_model.encode(self.unk_token + text, out_type=str)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/sentencepiece/__init__.py", line 552, in Encode
+    return self._EncodeAsPieces(input, enable_sampling, nbest_size,
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/sentencepiece/__init__.py", line 322, in _EncodeAsPieces
+    return _sentencepiece.SentencePieceProcessor__EncodeAsPieces(self, text, enable_sampling, nbest_size, alpha, add_bos, add_eos, reverse, emit_unk_piece)
+KeyboardInterrupt

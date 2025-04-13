@@ -1,0 +1,31 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.38s/it]
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Batch Size: 4, Runtime: 495.13ms, Peak Memory: 0.00GB, Throughput: 2585.19 tokens/s, Cache Utilization: 0.00%
+Batch Size: 8, Runtime: 25.20ms, Peak Memory: 0.00GB, Throughput: 101594.47 tokens/s, Cache Utilization: 0.00%
+Batch Size: 12, Runtime: 32.74ms, Peak Memory: 0.00GB, Throughput: 117275.35 tokens/s, Cache Utilization: 0.00%
+Batch Size: 16, Runtime: 44.30ms, Peak Memory: 0.00GB, Throughput: 115569.82 tokens/s, Cache Utilization: 0.00%
+Batch Size: 20, Runtime: 46.81ms, Peak Memory: 0.00GB, Throughput: 136726.66 tokens/s, Cache Utilization: 0.00%
+Batch Size: 24, Runtime: 68.94ms, Peak Memory: 0.00GB, Throughput: 111400.57 tokens/s, Cache Utilization: 0.00%
+Batch Size: 28, Runtime: 103.12ms, Peak Memory: 0.00GB, Throughput: 86892.00 tokens/s, Cache Utilization: 0.00%
+Batch Size: 32, Runtime: 109.63ms, Peak Memory: 0.00GB, Throughput: 93402.15 tokens/s, Cache Utilization: 0.00%
+Batch Size: 36, Runtime: 468.41ms, Peak Memory: 0.00GB, Throughput: 24594.10 tokens/s, Cache Utilization: 0.00%
+CUDA memory error at batch size 40. Stopping.
+CUDA out of memory. Tried to allocate 108.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 97.69 MiB is free. Process 2869831 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 20.57 GiB memory in use. Of the allocated memory 18.23 GiB is allocated by PyTorch, and 1.89 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Allocated memory: 0.0079345703125 GB
+Max allocated memory: 18.253175258636475 GB
+Total GPU memory: 23.64288330078125 GB
+Loading checkpoint shards:  50%|██████████████████████████████████▌                                  | 1/2 [00:02<00:02,  2.14s/it]
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 580, in <module>
+    model = LlamaForCausalLM.from_pretrained(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3903, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4377, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 933, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 330, in set_module_tensor_to_device
+    new_value = value.to(device)
+KeyboardInterrupt

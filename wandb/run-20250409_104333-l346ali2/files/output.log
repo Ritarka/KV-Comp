@@ -1,0 +1,49 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 566.90ms, Peak Memory: 12.80GB, Throughput: 2257.88 tokens/s, Cache Utilization: 54.16%
+Batch Size: 8, Runtime: 140.48ms, Peak Memory: 13.26GB, Throughput: 18222.80 tokens/s, Cache Utilization: 56.07%
+Batch Size: 12, Runtime: 201.82ms, Peak Memory: 13.71GB, Throughput: 19026.84 tokens/s, Cache Utilization: 58.01%
+Batch Size: 16, Runtime: 232.52ms, Peak Memory: 14.17GB, Throughput: 22019.58 tokens/s, Cache Utilization: 59.93%
+Batch Size: 20, Runtime: 297.80ms, Peak Memory: 14.62GB, Throughput: 21490.69 tokens/s, Cache Utilization: 61.85%
+Batch Size: 24, Runtime: 346.75ms, Peak Memory: 15.08GB, Throughput: 22148.70 tokens/s, Cache Utilization: 63.78%
+Batch Size: 28, Runtime: 412.39ms, Peak Memory: 15.53GB, Throughput: 21726.81 tokens/s, Cache Utilization: 65.68%
+Batch Size: 32, Runtime: 448.81ms, Peak Memory: 15.98GB, Throughput: 22816.13 tokens/s, Cache Utilization: 67.58%
+Batch Size: 36, Runtime: 526.58ms, Peak Memory: 16.44GB, Throughput: 21876.90 tokens/s, Cache Utilization: 69.53%
+Batch Size: 40, Runtime: 565.15ms, Peak Memory: 16.90GB, Throughput: 22648.73 tokens/s, Cache Utilization: 71.49%
+Batch Size: 44, Runtime: 632.64ms, Peak Memory: 17.36GB, Throughput: 22255.94 tokens/s, Cache Utilization: 73.42%
+Batch Size: 48, Runtime: 674.96ms, Peak Memory: 17.81GB, Throughput: 22757.07 tokens/s, Cache Utilization: 75.33%
+Batch Size: 52, Runtime: 786.82ms, Peak Memory: 18.26GB, Throughput: 21148.43 tokens/s, Cache Utilization: 77.25%
+Batch Size: 56, Runtime: 777.75ms, Peak Memory: 18.72GB, Throughput: 23040.91 tokens/s, Cache Utilization: 79.19%
+Batch Size: 60, Runtime: 861.38ms, Peak Memory: 19.17GB, Throughput: 22289.73 tokens/s, Cache Utilization: 81.10%
+Batch Size: 64, Runtime: 945.28ms, Peak Memory: 19.62GB, Throughput: 21665.50 tokens/s, Cache Utilization: 82.98%
+Batch Size: 68, Runtime: 965.76ms, Peak Memory: 20.07GB, Throughput: 22531.41 tokens/s, Cache Utilization: 84.88%
+Batch Size: 72, Runtime: 1041.62ms, Peak Memory: 20.53GB, Throughput: 22119.42 tokens/s, Cache Utilization: 86.83%
+Batch Size: 76, Runtime: 1082.14ms, Peak Memory: 20.99GB, Throughput: 22474.04 tokens/s, Cache Utilization: 88.76%
+Batch Size: 80, Runtime: 1139.49ms, Peak Memory: 21.43GB, Throughput: 22466.12 tokens/s, Cache Utilization: 90.65%
+CUDA memory error at batch size 84. Stopping.
+CUDA out of memory. Tried to allocate 1.28 GiB. GPU 1 has a total capacity of 23.64 GiB of which 1.20 GiB is free. Including non-PyTorch memory, this process has 22.41 GiB memory in use. Of the allocated memory 20.60 GiB is allocated by PyTorch, and 1.36 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.39s/it]
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Batch Size: 4, Runtime: 169.14ms, Peak Memory: 12.91GB, Throughput: 7567.88 tokens/s, Cache Utilization: 54.58%
+Batch Size: 8, Runtime: 114.97ms, Peak Memory: 13.56GB, Throughput: 22267.47 tokens/s, Cache Utilization: 57.36%
+Batch Size: 12, Runtime: 176.91ms, Peak Memory: 14.22GB, Throughput: 21705.52 tokens/s, Cache Utilization: 60.14%
+Batch Size: 16, Runtime: 206.74ms, Peak Memory: 14.88GB, Throughput: 24765.53 tokens/s, Cache Utilization: 62.92%
+Batch Size: 20, Runtime: 269.25ms, Peak Memory: 15.53GB, Throughput: 23769.76 tokens/s, Cache Utilization: 65.69%
+Batch Size: 24, Runtime: 314.54ms, Peak Memory: 16.19GB, Throughput: 24416.49 tokens/s, Cache Utilization: 68.47%
+Batch Size: 28, Runtime: 377.94ms, Peak Memory: 16.85GB, Throughput: 23707.53 tokens/s, Cache Utilization: 71.25%
+Batch Size: 32, Runtime: 412.57ms, Peak Memory: 17.50GB, Throughput: 24820.27 tokens/s, Cache Utilization: 74.02%
+Batch Size: 36, Runtime: 489.56ms, Peak Memory: 18.16GB, Throughput: 23531.52 tokens/s, Cache Utilization: 76.80%
+Batch Size: 40, Runtime: 524.24ms, Peak Memory: 18.81GB, Throughput: 24416.49 tokens/s, Cache Utilization: 79.58%
+Batch Size: 44, Runtime: 626.11ms, Peak Memory: 19.47GB, Throughput: 22488.23 tokens/s, Cache Utilization: 82.36%
+Batch Size: 48, Runtime: 628.45ms, Peak Memory: 20.13GB, Throughput: 24441.13 tokens/s, Cache Utilization: 85.13%
+Batch Size: 52, Runtime: 697.84ms, Peak Memory: 20.78GB, Throughput: 23845.05 tokens/s, Cache Utilization: 87.90%
+Batch Size: 56, Runtime: 744.06ms, Peak Memory: 21.44GB, Throughput: 24084.02 tokens/s, Cache Utilization: 90.68%
+CUDA memory error at batch size 60. Stopping.
+CUDA out of memory. Tried to allocate 162.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 131.25 MiB is free. Including non-PyTorch memory, this process has 23.49 GiB memory in use. Of the allocated memory 21.21 GiB is allocated by PyTorch, and 1.82 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 414, in <module>
+    speedup_ours_KIVI = KIVI_avg/our_avg
+NameError: name 'our_avg' is not defined

@@ -1,0 +1,42 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.25s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 12925.65ms, Peak Memory: 13.29GB, Throughput: 99.03 tokens/s, Cache Utilization: 56.23%
+Batch Size: 8, Runtime: 12224.01ms, Peak Memory: 13.96GB, Throughput: 209.42 tokens/s, Cache Utilization: 59.07%
+Batch Size: 12, Runtime: 12345.48ms, Peak Memory: 14.71GB, Throughput: 311.05 tokens/s, Cache Utilization: 62.23%
+Batch Size: 16, Runtime: 12342.72ms, Peak Memory: 15.39GB, Throughput: 414.82 tokens/s, Cache Utilization: 65.13%
+Batch Size: 20, Runtime: 12579.90ms, Peak Memory: 16.07GB, Throughput: 508.75 tokens/s, Cache Utilization: 67.98%
+Batch Size: 24, Runtime: 12851.31ms, Peak Memory: 16.75GB, Throughput: 597.60 tokens/s, Cache Utilization: 70.86%
+Batch Size: 28, Runtime: 12772.75ms, Peak Memory: 17.41GB, Throughput: 701.49 tokens/s, Cache Utilization: 73.66%
+Batch Size: 32, Runtime: 12918.02ms, Peak Memory: 18.09GB, Throughput: 792.69 tokens/s, Cache Utilization: 76.54%
+Batch Size: 36, Runtime: 12988.92ms, Peak Memory: 18.74GB, Throughput: 886.91 tokens/s, Cache Utilization: 79.30%
+Batch Size: 40, Runtime: 13320.49ms, Peak Memory: 19.43GB, Throughput: 960.93 tokens/s, Cache Utilization: 82.22%
+Batch Size: 44, Runtime: 13884.85ms, Peak Memory: 20.12GB, Throughput: 1014.05 tokens/s, Cache Utilization: 85.12%
+Batch Size: 48, Runtime: 14324.32ms, Peak Memory: 20.79GB, Throughput: 1072.30 tokens/s, Cache Utilization: 87.96%
+Batch Size: 52, Runtime: 14854.46ms, Peak Memory: 21.48GB, Throughput: 1120.20 tokens/s, Cache Utilization: 90.87%
+Batch Size: 56, Runtime: 15405.25ms, Peak Memory: 22.16GB, Throughput: 1163.24 tokens/s, Cache Utilization: 93.76%
+CUDA memory error at batch size 60. Stopping.
+CUDA out of memory. Tried to allocate 60.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 36.50 MiB is free. Including non-PyTorch memory, this process has 23.43 GiB memory in use. Of the allocated memory 21.83 GiB is allocated by PyTorch, and 1.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.26s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 7165.80ms, Peak Memory: 13.57GB, Throughput: 178.63 tokens/s, Cache Utilization: 57.41%
+Batch Size: 8, Runtime: 7965.87ms, Peak Memory: 14.59GB, Throughput: 321.37 tokens/s, Cache Utilization: 61.72%
+Batch Size: 12, Runtime: 8919.13ms, Peak Memory: 15.53GB, Throughput: 430.54 tokens/s, Cache Utilization: 65.70%
+Batch Size: 16, Runtime: 10063.23ms, Peak Memory: 16.52GB, Throughput: 508.78 tokens/s, Cache Utilization: 69.89%
+Batch Size: 20, Runtime: 11295.03ms, Peak Memory: 17.52GB, Throughput: 566.62 tokens/s, Cache Utilization: 74.12%
+Batch Size: 24, Runtime: 12160.05ms, Peak Memory: 18.53GB, Throughput: 631.58 tokens/s, Cache Utilization: 78.40%
+Batch Size: 28, Runtime: 14146.64ms, Peak Memory: 19.49GB, Throughput: 633.37 tokens/s, Cache Utilization: 82.45%
+Batch Size: 32, Runtime: 14212.72ms, Peak Memory: 20.48GB, Throughput: 720.48 tokens/s, Cache Utilization: 86.63%
+Batch Size: 36, Runtime: 16825.84ms, Peak Memory: 21.47GB, Throughput: 684.66 tokens/s, Cache Utilization: 90.82%
+CUDA memory error at batch size 40. Stopping.
+CUDA out of memory. Tried to allocate 156.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 154.50 MiB is free. Including non-PyTorch memory, this process has 23.31 GiB memory in use. Of the allocated memory 22.20 GiB is allocated by PyTorch, and 670.17 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.29s/it]
+Starting benchmark...
+get_wikitext2
+CUDA memory error at batch size 4. Stopping.
+shape '[161]' is invalid for input of size 33792
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 627, in <module>
+    our_avg = sum(benchmark_results_ours['runtimes'])/len(benchmark_results_ours['runtimes'])
+ZeroDivisionError: division by zero

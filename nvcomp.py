@@ -43,6 +43,7 @@ def quantize(array: np.ndarray, num_bits: int) -> tuple[np.ndarray, float, float
 def dequantize(quantized: np.ndarray, scale: float, offset: float) -> np.ndarray:
     return quantized * scale + offset
 
+
 array = torch.randn(100, 100).numpy()
 q_array, scale, shift = quantize(array, 2)
 nvarr_txt_h = nvcomp.as_array(q_array)

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 544, in <module>
+    past_key_values = QuantoQuantizedCache(cache_config=cache_config)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 463, in __init__
+    self.qtype = qint4 if self.nbits == 4 else qint2
+NameError: name 'qint2' is not defined

@@ -1,0 +1,6 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.43s/it]
+Starting benchmark...
+get_wikitext2
+CUDA memory error at batch size 4. Stopping.
+CUDA error: an illegal memory access was encountered
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

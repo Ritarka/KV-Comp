@@ -1,0 +1,5 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 587, in <module>
+    benchmark_results_llama = benchmark_model(model, tokenizer)
+NameError: name 'tokenizer' is not defined

@@ -1,0 +1,37 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.16s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 509.78ms, Peak Memory: 12.80GB, Throughput: 2510.91 tokens/s, Cache Utilization: 54.17%
+Batch Size: 8, Runtime: 46.02ms, Peak Memory: 13.26GB, Throughput: 55625.36 tokens/s, Cache Utilization: 56.09%
+Batch Size: 12, Runtime: 70.89ms, Peak Memory: 13.71GB, Throughput: 54167.92 tokens/s, Cache Utilization: 58.03%
+Batch Size: 16, Runtime: 85.02ms, Peak Memory: 14.17GB, Throughput: 60224.29 tokens/s, Cache Utilization: 59.95%
+Batch Size: 20, Runtime: 112.45ms, Peak Memory: 14.62GB, Throughput: 56912.31 tokens/s, Cache Utilization: 61.87%
+Batch Size: 24, Runtime: 132.38ms, Peak Memory: 15.08GB, Throughput: 58015.53 tokens/s, Cache Utilization: 63.81%
+Batch Size: 28, Runtime: 161.42ms, Peak Memory: 15.53GB, Throughput: 55505.70 tokens/s, Cache Utilization: 65.70%
+Batch Size: 32, Runtime: 177.58ms, Peak Memory: 15.98GB, Throughput: 57663.03 tokens/s, Cache Utilization: 67.60%
+Batch Size: 36, Runtime: 211.44ms, Peak Memory: 16.44GB, Throughput: 54483.15 tokens/s, Cache Utilization: 69.55%
+Batch Size: 40, Runtime: 228.27ms, Peak Memory: 16.90GB, Throughput: 56073.82 tokens/s, Cache Utilization: 71.51%
+Batch Size: 44, Runtime: 256.13ms, Peak Memory: 17.36GB, Throughput: 54971.68 tokens/s, Cache Utilization: 73.45%
+Batch Size: 48, Runtime: 273.88ms, Peak Memory: 17.81GB, Throughput: 56082.17 tokens/s, Cache Utilization: 75.35%
+Batch Size: 52, Runtime: 304.56ms, Peak Memory: 18.26GB, Throughput: 54637.02 tokens/s, Cache Utilization: 77.28%
+Batch Size: 56, Runtime: 318.13ms, Peak Memory: 18.72GB, Throughput: 56329.30 tokens/s, Cache Utilization: 79.21%
+Batch Size: 60, Runtime: 353.81ms, Peak Memory: 19.17GB, Throughput: 54266.62 tokens/s, Cache Utilization: 81.12%
+Batch Size: 64, Runtime: 881.31ms, Peak Memory: 19.62GB, Throughput: 23238.05 tokens/s, Cache Utilization: 83.01%
+Batch Size: 68, Runtime: 397.52ms, Peak Memory: 20.07GB, Throughput: 54739.01 tokens/s, Cache Utilization: 84.91%
+Batch Size: 72, Runtime: 975.05ms, Peak Memory: 20.53GB, Throughput: 23629.57 tokens/s, Cache Utilization: 86.86%
+Batch Size: 76, Runtime: 446.92ms, Peak Memory: 20.99GB, Throughput: 54416.91 tokens/s, Cache Utilization: 88.79%
+CUDA memory error at batch size 80. Stopping.
+CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 23.63 GiB of which 1.11 GiB is free. Including non-PyTorch memory, this process has 22.35 GiB memory in use. Of the allocated memory 20.21 GiB is allocated by PyTorch, and 1.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards:  50%|█████████████████████████████████████████████████▌                                                 | 1/2 [00:01<00:01,  1.78s/it]
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 589, in <module>
+    model = LlamaForCausalLM.from_pretrained(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3903, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4377, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/modeling_utils.py", line 933, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 330, in set_module_tensor_to_device
+    new_value = value.to(device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 68.50 MiB is free. Including non-PyTorch memory, this process has 23.40 GiB memory in use. Of the allocated memory 22.93 GiB is allocated by PyTorch, and 12.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

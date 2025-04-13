@@ -1,0 +1,63 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.26s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 13133.11ms, Peak Memory: 13.24GB, Throughput: 97.46 tokens/s, Cache Utilization: 56.03%
+Batch Size: 8, Runtime: 12337.86ms, Peak Memory: 13.24GB, Throughput: 207.49 tokens/s, Cache Utilization: 56.04%
+Batch Size: 12, Runtime: 12252.92ms, Peak Memory: 13.24GB, Throughput: 313.39 tokens/s, Cache Utilization: 56.04%
+Batch Size: 16, Runtime: 12239.50ms, Peak Memory: 13.24GB, Throughput: 418.32 tokens/s, Cache Utilization: 56.04%
+Batch Size: 20, Runtime: 12203.27ms, Peak Memory: 13.24GB, Throughput: 524.45 tokens/s, Cache Utilization: 56.04%
+Batch Size: 24, Runtime: 12253.05ms, Peak Memory: 13.24GB, Throughput: 626.78 tokens/s, Cache Utilization: 56.04%
+Batch Size: 28, Runtime: 12281.57ms, Peak Memory: 13.24GB, Throughput: 729.55 tokens/s, Cache Utilization: 56.04%
+Batch Size: 32, Runtime: 12215.58ms, Peak Memory: 13.24GB, Throughput: 838.27 tokens/s, Cache Utilization: 56.04%
+Batch Size: 36, Runtime: 12350.84ms, Peak Memory: 13.24GB, Throughput: 932.73 tokens/s, Cache Utilization: 56.04%
+Batch Size: 40, Runtime: 12315.63ms, Peak Memory: 13.24GB, Throughput: 1039.33 tokens/s, Cache Utilization: 56.04%
+Batch Size: 44, Runtime: 12237.06ms, Peak Memory: 13.24GB, Throughput: 1150.60 tokens/s, Cache Utilization: 56.04%
+Batch Size: 48, Runtime: 12247.78ms, Peak Memory: 13.24GB, Throughput: 1254.10 tokens/s, Cache Utilization: 56.04%
+Batch Size: 52, Runtime: 12176.63ms, Peak Memory: 13.24GB, Throughput: 1366.55 tokens/s, Cache Utilization: 56.04%
+Batch Size: 56, Runtime: 12248.59ms, Peak Memory: 13.24GB, Throughput: 1463.03 tokens/s, Cache Utilization: 56.04%
+Batch Size: 60, Runtime: 12335.53ms, Peak Memory: 13.24GB, Throughput: 1556.48 tokens/s, Cache Utilization: 56.04%
+Batch Size: 64, Runtime: 12256.56ms, Peak Memory: 13.24GB, Throughput: 1670.94 tokens/s, Cache Utilization: 56.04%
+Batch Size: 68, Runtime: 12266.26ms, Peak Memory: 13.24GB, Throughput: 1773.97 tokens/s, Cache Utilization: 56.04%
+Batch Size: 72, Runtime: 12194.54ms, Peak Memory: 13.24GB, Throughput: 1889.37 tokens/s, Cache Utilization: 56.04%
+Batch Size: 76, Runtime: 12235.55ms, Peak Memory: 13.24GB, Throughput: 1987.65 tokens/s, Cache Utilization: 56.04%
+Batch Size: 80, Runtime: 12321.16ms, Peak Memory: 13.24GB, Throughput: 2077.73 tokens/s, Cache Utilization: 56.04%
+Batch Size: 84, Runtime: 12311.70ms, Peak Memory: 13.24GB, Throughput: 2183.29 tokens/s, Cache Utilization: 56.04%
+Batch Size: 88, Runtime: 12286.78ms, Peak Memory: 13.24GB, Throughput: 2291.89 tokens/s, Cache Utilization: 56.04%
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 580, in <module>
+    benchmark_results_kivi = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 240, in benchmark_model
+    outputs = model.generate(**inputs, max_new_tokens=338)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 1989, in generate
+    result = self._sample(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/generation/utils.py", line 2932, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 862, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 751, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kivi.py", line 624, in forward
+    hidden_states = self.post_attention_layernorm(hidden_states)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 72, in forward
+    return self.weight * hidden_states.to(input_dtype)
+KeyboardInterrupt

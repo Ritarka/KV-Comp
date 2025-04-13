@@ -1,0 +1,21 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 4145.84ms, Peak Memory: 13.02GB, Throughput: 308.74 tokens/s, Cache Utilization: 55.08%
+Batch Size: 8, Runtime: 12327.47ms, Peak Memory: 14.46GB, Throughput: 207.67 tokens/s, Cache Utilization: 61.17%
+Batch Size: 12, Runtime: 13314.18ms, Peak Memory: 15.36GB, Throughput: 288.41 tokens/s, Cache Utilization: 64.95%
+Batch Size: 16, Runtime: 14467.01ms, Peak Memory: 16.26GB, Throughput: 353.91 tokens/s, Cache Utilization: 68.75%
+Batch Size: 20, Runtime: 15969.00ms, Peak Memory: 17.18GB, Throughput: 400.78 tokens/s, Cache Utilization: 72.66%
+Batch Size: 24, Runtime: 17101.79ms, Peak Memory: 18.15GB, Throughput: 449.08 tokens/s, Cache Utilization: 76.78%
+Batch Size: 28, Runtime: 18573.62ms, Peak Memory: 19.05GB, Throughput: 482.40 tokens/s, Cache Utilization: 80.55%
+CUDA memory error at batch size 32. Stopping.
+CUDA out of memory. Tried to allocate 116.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 23.69 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 20.64 GiB memory in use. Of the allocated memory 19.71 GiB is allocated by PyTorch, and 489.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.35s/it]
+Starting benchmark...
+get_wikitext2
+CUDA memory error at batch size 4. Stopping.
+CUDA error: CUBLAS_STATUS_EXECUTION_FAILED when calling `cublasGemmStridedBatchedEx( handle, opa, opb, m, n, k, (void*)(&falpha), a, CUDA_R_16F, lda, stridea, b, CUDA_R_16F, ldb, strideb, (void*)(&fbeta), c, CUDA_R_16F, ldc, stridec, num_batches, CUDA_R_32F, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 615, in <module>
+    KIVI_avg = sum(benchmark_results_kivi['runtimes'])/len(benchmark_results_kivi['runtimes'])
+ZeroDivisionError: division by zero

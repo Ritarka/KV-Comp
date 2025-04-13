@@ -1,0 +1,56 @@
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.37s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 886.37ms, Peak Memory: 12.80GB, Throughput: 1444.10 tokens/s, Cache Utilization: 54.16%
+Batch Size: 8, Runtime: 50.36ms, Peak Memory: 13.26GB, Throughput: 50833.31 tokens/s, Cache Utilization: 56.07%
+Batch Size: 12, Runtime: 70.84ms, Peak Memory: 13.71GB, Throughput: 54209.49 tokens/s, Cache Utilization: 58.00%
+Batch Size: 16, Runtime: 92.23ms, Peak Memory: 14.17GB, Throughput: 55510.47 tokens/s, Cache Utilization: 59.92%
+Batch Size: 20, Runtime: 110.42ms, Peak Memory: 14.62GB, Throughput: 57960.14 tokens/s, Cache Utilization: 61.84%
+Batch Size: 24, Runtime: 143.64ms, Peak Memory: 15.08GB, Throughput: 53465.65 tokens/s, Cache Utilization: 63.78%
+Batch Size: 28, Runtime: 180.56ms, Peak Memory: 15.53GB, Throughput: 49623.36 tokens/s, Cache Utilization: 65.68%
+Batch Size: 32, Runtime: 211.00ms, Peak Memory: 15.98GB, Throughput: 48529.72 tokens/s, Cache Utilization: 67.59%
+Batch Size: 36, Runtime: 235.64ms, Peak Memory: 16.44GB, Throughput: 48888.77 tokens/s, Cache Utilization: 69.53%
+Batch Size: 40, Runtime: 265.30ms, Peak Memory: 16.90GB, Throughput: 48247.00 tokens/s, Cache Utilization: 71.48%
+Batch Size: 44, Runtime: 294.96ms, Peak Memory: 17.35GB, Throughput: 47734.67 tokens/s, Cache Utilization: 73.39%
+Batch Size: 48, Runtime: 310.93ms, Peak Memory: 17.81GB, Throughput: 49400.34 tokens/s, Cache Utilization: 75.33%
+Batch Size: 52, Runtime: 353.13ms, Peak Memory: 18.26GB, Throughput: 47121.63 tokens/s, Cache Utilization: 77.24%
+CUDA memory error at batch size 56. Stopping.
+CUDA out of memory. Tried to allocate 876.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 809.69 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 19.87 GiB memory in use. Of the allocated memory 17.86 GiB is allocated by PyTorch, and 1.56 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Allocated memory: 0.0079345703125 GB
+Max allocated memory: 18.261180877685547 GB
+Total GPU memory: 23.64288330078125 GB
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.33s/it]
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Batch Size: 4, Runtime: 16.54ms, Peak Memory: 18.26GB, Throughput: 77366.72 tokens/s, Cache Utilization: 77.24%
+Batch Size: 8, Runtime: 25.12ms, Peak Memory: 18.26GB, Throughput: 101914.62 tokens/s, Cache Utilization: 77.24%
+Batch Size: 12, Runtime: 32.33ms, Peak Memory: 18.26GB, Throughput: 118775.87 tokens/s, Cache Utilization: 77.24%
+Batch Size: 16, Runtime: 44.14ms, Peak Memory: 18.26GB, Throughput: 115993.05 tokens/s, Cache Utilization: 77.24%
+Batch Size: 20, Runtime: 46.70ms, Peak Memory: 18.26GB, Throughput: 137045.67 tokens/s, Cache Utilization: 77.24%
+Batch Size: 24, Runtime: 68.26ms, Peak Memory: 18.26GB, Throughput: 112511.85 tokens/s, Cache Utilization: 77.24%
+Batch Size: 28, Runtime: 102.01ms, Peak Memory: 18.26GB, Throughput: 87836.98 tokens/s, Cache Utilization: 77.24%
+Batch Size: 32, Runtime: 109.30ms, Peak Memory: 18.26GB, Throughput: 93690.87 tokens/s, Cache Utilization: 77.24%
+Batch Size: 36, Runtime: 132.60ms, Peak Memory: 18.26GB, Throughput: 86878.88 tokens/s, Cache Utilization: 77.24%
+CUDA memory error at batch size 40. Stopping.
+CUDA out of memory. Tried to allocate 108.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 61.69 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 20.60 GiB memory in use. Of the allocated memory 18.23 GiB is allocated by PyTorch, and 1.92 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.48s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 33.09ms, Peak Memory: 18.26GB, Throughput: 38683.36 tokens/s, Cache Utilization: 77.24%
+Batch Size: 8, Runtime: 49.80ms, Peak Memory: 18.26GB, Throughput: 51403.25 tokens/s, Cache Utilization: 77.24%
+Batch Size: 12, Runtime: 70.21ms, Peak Memory: 18.26GB, Throughput: 54689.36 tokens/s, Cache Utilization: 77.24%
+Batch Size: 16, Runtime: 92.03ms, Peak Memory: 18.26GB, Throughput: 55632.27 tokens/s, Cache Utilization: 77.24%
+Batch Size: 20, Runtime: 110.00ms, Peak Memory: 18.26GB, Throughput: 58183.64 tokens/s, Cache Utilization: 77.24%
+Batch Size: 24, Runtime: 142.06ms, Peak Memory: 18.26GB, Throughput: 54061.83 tokens/s, Cache Utilization: 77.24%
+Batch Size: 28, Runtime: 178.83ms, Peak Memory: 18.26GB, Throughput: 50104.68 tokens/s, Cache Utilization: 77.24%
+Batch Size: 32, Runtime: 209.10ms, Peak Memory: 18.26GB, Throughput: 48971.28 tokens/s, Cache Utilization: 77.24%
+Batch Size: 36, Runtime: 234.77ms, Peak Memory: 18.26GB, Throughput: 49069.09 tokens/s, Cache Utilization: 77.24%
+Batch Size: 40, Runtime: 265.34ms, Peak Memory: 18.26GB, Throughput: 48240.67 tokens/s, Cache Utilization: 77.24%
+Batch Size: 44, Runtime: 294.38ms, Peak Memory: 18.26GB, Throughput: 47829.50 tokens/s, Cache Utilization: 77.24%
+Batch Size: 48, Runtime: 310.68ms, Peak Memory: 18.26GB, Throughput: 49439.80 tokens/s, Cache Utilization: 77.24%
+Batch Size: 52, Runtime: 352.18ms, Peak Memory: 18.26GB, Throughput: 47248.66 tokens/s, Cache Utilization: 77.24%
+CUDA memory error at batch size 56. Stopping.
+CUDA out of memory. Tried to allocate 876.00 MiB. GPU 1 has a total capacity of 23.64 GiB of which 857.69 MiB is free. Process 2875479 has 2.95 GiB memory in use. Including non-PyTorch memory, this process has 19.82 GiB memory in use. Of the allocated memory 17.86 GiB is allocated by PyTorch, and 1.51 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+0.7307912188088815 0.2600110704728756
+Plots saved successfully!

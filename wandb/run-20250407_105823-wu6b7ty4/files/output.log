@@ -1,0 +1,79 @@
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.16s/it]
+Starting benchmark...
+get_wikitext2
+Batch Size: 4, Runtime: 518.43ms, Peak Memory: 12.80GB, Throughput: 2469.00 tokens/s, Cache Utilization: 54.17%
+Batch Size: 8, Runtime: 45.85ms, Peak Memory: 13.26GB, Throughput: 55835.07 tokens/s, Cache Utilization: 56.09%
+Batch Size: 12, Runtime: 75.78ms, Peak Memory: 13.71GB, Throughput: 50671.46 tokens/s, Cache Utilization: 58.03%
+Batch Size: 16, Runtime: 84.85ms, Peak Memory: 14.17GB, Throughput: 60344.44 tokens/s, Cache Utilization: 59.95%
+Batch Size: 20, Runtime: 112.61ms, Peak Memory: 14.62GB, Throughput: 56831.58 tokens/s, Cache Utilization: 61.87%
+Batch Size: 24, Runtime: 132.30ms, Peak Memory: 15.08GB, Throughput: 58050.04 tokens/s, Cache Utilization: 63.81%
+Batch Size: 28, Runtime: 161.40ms, Peak Memory: 15.53GB, Throughput: 55513.98 tokens/s, Cache Utilization: 65.70%
+Batch Size: 32, Runtime: 177.54ms, Peak Memory: 15.98GB, Throughput: 57676.35 tokens/s, Cache Utilization: 67.60%
+Batch Size: 36, Runtime: 211.16ms, Peak Memory: 16.44GB, Throughput: 54554.75 tokens/s, Cache Utilization: 69.55%
+Batch Size: 40, Runtime: 227.58ms, Peak Memory: 16.90GB, Throughput: 56243.29 tokens/s, Cache Utilization: 71.51%
+Batch Size: 44, Runtime: 255.15ms, Peak Memory: 17.36GB, Throughput: 55184.14 tokens/s, Cache Utilization: 73.45%
+Batch Size: 48, Runtime: 272.84ms, Peak Memory: 17.81GB, Throughput: 56296.38 tokens/s, Cache Utilization: 75.35%
+Batch Size: 52, Runtime: 303.35ms, Peak Memory: 18.26GB, Throughput: 54854.61 tokens/s, Cache Utilization: 77.28%
+Batch Size: 56, Runtime: 316.88ms, Peak Memory: 18.72GB, Throughput: 56552.19 tokens/s, Cache Utilization: 79.21%
+Batch Size: 60, Runtime: 352.32ms, Peak Memory: 19.17GB, Throughput: 54495.88 tokens/s, Cache Utilization: 81.12%
+Batch Size: 64, Runtime: 878.75ms, Peak Memory: 19.62GB, Throughput: 23305.84 tokens/s, Cache Utilization: 83.01%
+Batch Size: 68, Runtime: 396.49ms, Peak Memory: 20.07GB, Throughput: 54881.44 tokens/s, Cache Utilization: 84.91%
+Batch Size: 72, Runtime: 972.75ms, Peak Memory: 20.53GB, Throughput: 23685.37 tokens/s, Cache Utilization: 86.86%
+Batch Size: 76, Runtime: 445.85ms, Peak Memory: 20.99GB, Throughput: 54547.39 tokens/s, Cache Utilization: 88.79%
+CUDA memory error at batch size 80. Stopping.
+CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 23.63 GiB of which 1.11 GiB is free. Including non-PyTorch memory, this process has 22.35 GiB memory in use. Of the allocated memory 20.21 GiB is allocated by PyTorch, and 1.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.13s/it]
+Starting benchmark...
+get_wikitext2
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+Batch Size: 4, Runtime: 116.17ms, Peak Memory: 12.91GB, Throughput: 11018.30 tokens/s, Cache Utilization: 54.60%
+Batch Size: 8, Runtime: 16.19ms, Peak Memory: 13.56GB, Throughput: 158114.80 tokens/s, Cache Utilization: 57.38%
+Batch Size: 12, Runtime: 27.28ms, Peak Memory: 14.22GB, Throughput: 140738.62 tokens/s, Cache Utilization: 60.16%
+Batch Size: 16, Runtime: 34.31ms, Peak Memory: 14.88GB, Throughput: 149228.22 tokens/s, Cache Utilization: 62.94%
+Batch Size: 20, Runtime: 45.42ms, Peak Memory: 15.53GB, Throughput: 140909.52 tokens/s, Cache Utilization: 65.71%
+Batch Size: 24, Runtime: 53.44ms, Peak Memory: 16.19GB, Throughput: 143716.17 tokens/s, Cache Utilization: 68.49%
+Batch Size: 28, Runtime: 64.95ms, Peak Memory: 16.85GB, Throughput: 137951.28 tokens/s, Cache Utilization: 71.27%
+Batch Size: 32, Runtime: 71.30ms, Peak Memory: 17.50GB, Throughput: 143618.93 tokens/s, Cache Utilization: 74.05%
+Batch Size: 36, Runtime: 84.92ms, Peak Memory: 18.16GB, Throughput: 135653.01 tokens/s, Cache Utilization: 76.82%
+Batch Size: 40, Runtime: 91.17ms, Peak Memory: 18.81GB, Throughput: 140404.66 tokens/s, Cache Utilization: 79.60%
+Batch Size: 44, Runtime: 588.89ms, Peak Memory: 19.47GB, Throughput: 23909.20 tokens/s, Cache Utilization: 82.38%
+Batch Size: 48, Runtime: 95.88ms, Peak Memory: 20.13GB, Throughput: 160197.01 tokens/s, Cache Utilization: 85.16%
+Batch Size: 52, Runtime: 671.67ms, Peak Memory: 20.78GB, Throughput: 24773.95 tokens/s, Cache Utilization: 87.93%
+CUDA memory error at batch size 56. Stopping.
+CUDA out of memory. Tried to allocate 876.00 MiB. GPU 0 has a total capacity of 23.63 GiB of which 740.50 MiB is free. Including non-PyTorch memory, this process has 22.74 GiB memory in use. Of the allocated memory 20.58 GiB is allocated by PyTorch, and 1.70 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+`LlamaRotaryEmbedding` can now be fully parameterized by passing the model config through the `config` argument. All other arguments will be removed in v4.45
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.15s/it]
+Starting benchmark...
+get_wikitext2
+Traceback (most recent call last):
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 622, in <module>
+    benchmark_results_ours = benchmark_model(model, tokenizer)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/test_perplexity.py", line 240, in benchmark_model
+    outputs = model(batch)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 1165, in forward
+    outputs = self.model(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 1054, in forward
+    layer_outputs = decoder_layer(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 914, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/intern/anaconda3/envs/kivi2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/intern/ritarka/KV-Comp/models/llama_kvcomp.py", line 269, in forward
+    compressed_k = compress_with_nvcomp(q_k)
+TypeError: compress_with_nvcomp() missing 1 required positional argument: 'codec'

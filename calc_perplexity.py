@@ -23,6 +23,10 @@ from accelerate import infer_auto_device_map, dispatch_model
 
 import matplotlib.pyplot as plt
 import gc
+from models.llama_kivi import LlamaForCausalLM_KIVI
+from models.comp_replace import convert_kvcache_llama_heavy_recent
+
+import wandb
 
 
 def get_wikitext2(tokenizer, train_size, val_size, seed, seqlen, test_only):
@@ -187,7 +191,7 @@ def evaluate(model, tokenizer):
     return results
 
 @torch.no_grad()
-def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=512, batch_step=16):
+def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=512, batch_step=4):
     """Runs benchmarks for runtime, peak memory, throughput, and cache utilization."""
     
     print("Starting benchmark...")
@@ -196,7 +200,7 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
     testenc = testloader.input_ids if hasattr(testloader, 'input_ids') else testloader
 
     block_class_name = model.model.layers[0].__class__.__name__
-    device_map = infer_auto_device_map(model, max_memory={i: "24GiB" for i in range(torch.cuda.device_count())}, no_split_module_classes=[block_class_name])
+    device_map = infer_auto_device_map(model, max_memory={1: "21GiB" for i in range(torch.cuda.device_count())}, no_split_module_classes=[block_class_name])
     model = dispatch_model(model, device_map=device_map)
 
     
@@ -210,6 +214,11 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
     model.config.use_cache = True
     model.eval()
 
+    # with torch.profiler.profile(
+    #     activities=[torch.profiler.ProfilerActivity.CPU, torch.profiler.ProfilerActivity.CUDA],
+    #     record_shapes=True,
+    #     profile_memory=True
+    # ) as prof:
     count = 0
     while batch_size <= max_batch_size:
         try:
@@ -221,13 +230,22 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
             batch = testenc[:, :seqlen].repeat(batch_size, 1).to(primary_device)
 
             start_time = time.time()
-            outputs = model(batch) # Only using inference, generation leads to a runtime error >>> NEED TO DEBUG
+
+            outputs = model(batch)
+
+            # outputs = model(batch)
             end_time = time.time()
+            # print(len(outputs))
             # print(outputs)
+            #print(type(outputs))
             runtime = (end_time - start_time) * 1000  # Convert to milliseconds
             peak_memory = torch.cuda.max_memory_allocated() / (1024 ** 3)  # Convert to GB
-            num_tokens = batch.shape[1] * batch_size
+            num_tokens = batch.shape[0] * 320
             throughput = num_tokens / (runtime / 1000)
+            
+            total_gpu_memory = torch.cuda.get_device_properties(1).total_memory / (1024 ** 3)
+            cache_utilization = (peak_memory / total_gpu_memory) * 100  # Cache utilization %
+
 
             # Store results
             batch_sizes.append(batch_size)
@@ -235,11 +253,21 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
             memory_usages.append(peak_memory)
             throughputs.append(throughput)
             cache_usages.append(peak_memory / (torch.cuda.get_device_properties(1).total_memory/ (1024 ** 3)) * 100) # NEED TO DEBUG
+            
+            
+            wandb.log({
+                "batch_size": batch_size,
+                "runtime_ms": runtime,
+                "peak_memory_GB": peak_memory,
+                "throughput_tokens_per_s": throughput,
+                "cache_utilization_percent": cache_utilization
+            })
+
 
             print(f"Batch Size: {batch_size}, Runtime: {runtime:.2f}ms, Peak Memory: {peak_memory:.2f}GB, Throughput: {throughput:.2f} tokens/s, Cache Utilization: {cache_usages[-1]:.2f}%")
 
             batch_size += batch_step
-            count += 1
+            # count += 1
             # if count == 5:
             #     break
 
@@ -248,15 +276,17 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
             print(e)
             break
 
+    # print(prof.key_averages().table(sort_by="cuda_time_total", row_limit=10))
+
     # Restore original model settings
     model.config.use_cache = use_cache
     
-    torch.cuda.empty_cache()
-    gc.collect()  # Python garbage collection
-    torch.cuda.reset_peak_memory_stats()  # Reset memory stats for next model
+    # torch.cuda.empty_cache()
+    # gc.collect()  # Python garbage collection
+    # torch.cuda.reset_peak_memory_stats()  # Reset memory stats for next model
 
 
-    
+    # print(runtimes)
     return {
         "batch_sizes": batch_sizes,
         "runtimes": runtimes,
@@ -264,8 +294,6 @@ def benchmark_model(model, tokenizer, dataset_name='wikitext2', max_batch_size=5
         "throughputs": throughputs,
         "cache_usages": cache_usages,
     }
-
-from models.llama_kivi import LlamaForCausalLM_KIVI
 
 K_BITS = 2
 V_BITS = 2
@@ -278,12 +306,28 @@ model_name_or_path = 'meta-llama/Llama-2-7b-hf'
 config = LlamaConfig.from_pretrained(model_name_or_path)
 config.k_bits = K_BITS
 config.v_bits = V_BITS
-config.use_flash = False
+config.use_flash = True
 config.group_size = GROUP_SIZE
 config.residual_length = RESIDUAL_LENGTH
 CACHE_DIR = PATH_TO_YOUR_SAVE_DIR
 
-model = LlamaForCausalLM_KIVI.from_pretrained(
+from transformers import LlamaForCausalLM
+torch.backends.cudnn.benchmark = True
+wandb.init(project="test_kvcache")
+
+
+########### BENCHMARK KV-COMP ###############
+config.use_flash = True
+# model = LlamaForCausalLM_KIVI.from_pretrained(
+#     pretrained_model_name_or_path=model_name_or_path,
+#     config=config,
+#     cache_dir=CACHE_DIR,
+#     torch_dtype=torch.float16,
+#     low_cpu_mem_usage=True,
+#     device_map={"": "cuda:1"},
+# )
+
+model = LlamaForCausalLM.from_pretrained(
     pretrained_model_name_or_path=model_name_or_path,
     config=config,
     cache_dir=CACHE_DIR,
@@ -291,36 +335,39 @@ model = LlamaForCausalLM_KIVI.from_pretrained(
     low_cpu_mem_usage=True,
     device_map={"": "cuda:1"},
 )
-# model.to(device)
-    
+
+model, num_changes = convert_kvcache_llama_heavy_recent(model, config)
+print(model)
+print(f"Number of changes: {num_changes}")
+# exit()
+
 tokenizer = AutoTokenizer.from_pretrained(
     model_name_or_path, 
     use_fast=False, 
     trust_remote_code=True, 
     tokenizer_type='llama'
 )
-
-torch.backends.cudnn.benchmark = True
-# results = evaluate(model, tokenizer)
-# print(results)
-
-
-# Run the benchmark
 benchmark_results_ours = benchmark_model(model, tokenizer)
 
+
+########### BENCHMARK LLAMA ###############
+
+config.use_flash = True
 # Run the benchmark with regular llama
-from transformers import LlamaForCausalLM
 regular_config = LlamaConfig.from_pretrained(model_name_or_path)
 model = LlamaForCausalLM.from_pretrained(
     pretrained_model_name_or_path=model_name_or_path,
-    config=regular_config,
+    config=config,
     cache_dir=CACHE_DIR,
     torch_dtype=torch.float16,
     low_cpu_mem_usage=True,
     device_map={"": "cuda:1"},
+    attn_implementation="flash_attention_2"
 )
 benchmark_results_llama = benchmark_model(model, tokenizer)
 
+
+########### BENCHMARK KIVI ###############
 config.k_bits = 2
 config.v_bits = 2
 config.use_flash = True
@@ -373,7 +420,7 @@ for i, metric in enumerate(metrics):
     plt.grid(True)
 
     # Save the figure instead of showing it
-    plt.savefig(f"images/{file_names[i]}")
+    plt.savefig(f"images/{metrics[i]}.png")
     plt.close()  # Close the figure to free up memory
 
 print("Plots saved successfully!")  # Confirmation message
