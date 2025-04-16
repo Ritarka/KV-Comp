@@ -32,6 +32,9 @@ codec = nvcomp.Codec(algorithm="ANS", bitstream_kind=nvcomp.BitstreamKind.NVCOMP
 # @timer(0)
 def quantize(array: torch.Tensor, num_bits: int):
     # assert num_bits <= 8, "Just need to change the quantizes astype"
+    assert len(array.shape) == 4, "Only support 4D tensor"
+    assert num_bits <= 4
+    # assert array.dtype == torch.float16, "Only support float16 tensor"
     
     num_levels = 2 ** num_bits
     min_val = array.min()
@@ -399,26 +402,37 @@ class LlamaFlashAttention_KVCOMP_ABLATED(LlamaAttention_KVCOMP_ABLATED):
         
         # assert self.num_key_value_groups == 1
         # [bsz, nh, t, hd]
+        # print("here")
         
         """KEEP"""
         if past_key_value is not None:
-            key_states_quant_trans = None
+            key_states_quant_trans = past_key_value[0]
             key_states_full = past_key_value[1]
-            key_scale_trans = None
-            key_mn_trans = None
-            value_states_quant = None
+            key_scale_trans = past_key_value[2]
+            key_mn_trans = past_key_value[3]
+            value_states_quant = past_key_value[4]
             value_states_full = past_key_value[5]
-            value_scale = None
-            value_mn = None           
+            value_scale = past_key_value[6]
+            value_mn = past_key_value[7]           
             
             att_qkquant = None
+            
+            assert key_states_quant_trans is not None, "Key states quantization is None"
+            assert value_states_quant is not None, "Value states quantization is None"
+            
+            key_states_full = dequantize(key_states_quant_trans, key_scale_trans, key_mn_trans)
+            value_states_full = dequantize(value_states_quant, value_scale, value_mn)
+            
             if key_states_full is not None:
                 key_states_full = torch.cat([key_states_full, key_states], dim=2)
             else:
                 key_states_full = key_states
-            
+                
             att_qkfull = torch.matmul(query_states, repeat_kv(key_states_full, self.num_key_value_groups).transpose(2, 3))
             attn_weights = att_qkfull / math.sqrt(self.head_dim)
+            
+            # print("here")
+
 
             if attn_weights.size() != (bsz, self.num_heads, q_len, kv_seq_len):
                 raise ValueError(
@@ -444,6 +458,10 @@ class LlamaFlashAttention_KVCOMP_ABLATED(LlamaAttention_KVCOMP_ABLATED):
 
             attn_output = torch.matmul(attn_weights, value_states_full)
             attn_output = attn_output.transpose(1, 2).contiguous()
+            
+            key_states_quant_trans, key_scale_trans, key_mn_trans = quantize(key_states_full, 4)            
+            value_states_quant, value_scale, value_mn = quantize(value_states_full, 4)
+
             
 
         else:
@@ -476,19 +494,21 @@ class LlamaFlashAttention_KVCOMP_ABLATED(LlamaAttention_KVCOMP_ABLATED):
             key_states_quant = None
             key_states_full = key_states
 
-            key_states_quant_trans = None
-            key_scale_trans = None
-            key_mn_trans = None
+            key_states_quant_trans, key_scale_trans, key_mn_trans = quantize(key_states_full, 4)
+            # key_states_quant_trans = None
+            # key_scale_trans = None
+            # key_mn_trans = None
             
-            value_states_quant = None
             value_states_full = value_states
-            value_scale = None
-            value_mn = None
+            value_states_quant, value_scale, value_mn = quantize(value_states_full, 4)
+            # value_states_quant = None
+            # value_scale = None
+            # value_mn = None
         
         
         """Necessary"""
-        past_key_value = (key_states_quant_trans, key_states_full, key_scale_trans, key_mn_trans, 
-                          value_states_quant, value_states_full, value_scale, value_mn, None, kv_seq_len) if use_cache else None
+        past_key_value = (key_states_quant_trans, None, key_scale_trans, key_mn_trans, 
+                          value_states_quant, None, value_scale, value_mn, None, kv_seq_len) if use_cache else None
         attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
 
         if self.config.pretraining_tp > 1:
